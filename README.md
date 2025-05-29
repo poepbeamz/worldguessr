@@ -16,6 +16,7 @@ A free and open-source version of the popular geography game inspired by GeoGues
 
 ## Acknowledgements
 
+- Aayush Palai ( https://github.com/A2Pro ) for leading mobile development efforts
 - [OpenStreetMap](https://www.openstreetmap.org/)
 - [OpenLayers](https://openlayers.org/)
 - [Google Maps API](https://developers.google.com/maps)
