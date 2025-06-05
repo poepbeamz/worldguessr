@@ -1112,6 +1112,10 @@ if(inCrazyGames) {
             let code = inCrazyGames ?  window.CrazyGames.SDK.game.getInviteParam("code") : window.localStorage.getItem("joinCode");
             let instantJoin =  (inCrazyGames && window.CrazyGames.SDK.game.isInstantMultiplayer) || window.location.search.includes("instantJoin");
 
+            if( window.CrazyGames.SDK.game.getInviteParam("code") || window.CrazyGames.SDK.game.isInstantMultiplayer) {
+              console.log("crazygames");
+              setInCrazyGames(true);
+            }
 
             if(window.localStorage.getItem("joinCode")) {
               window.localStorage.removeItem("joinCode")
