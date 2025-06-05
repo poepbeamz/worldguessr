@@ -1097,7 +1097,7 @@ if(inCrazyGames) {
 
   useEffect(() => {
 
-    if(window.location.search.includes("code=")) {
+    if(window.location.search.includes("code=") && !window.location.search.includes("crazygames")) {
       try {
       window.localStorage.setItem("joinCode", window.location.search.split("code=")[1].split("&")[0])
       window.location.href = "/"
