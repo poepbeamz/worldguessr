@@ -2,7 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useEffect } from "react";
 
-export default function HeadContent({text,inCoolMathGames}) {
+export default function HeadContent({text,inCoolMathGames,inCrazyGames,setInCrazyGames}) {
   useEffect(() => {
     if (!window.location.search.includes("crazygames") && !process.env.NEXT_PUBLIC_POKI &&
   !process.env.NEXT_PUBLIC_COOLMATH) {
@@ -34,6 +34,7 @@ window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{win
         document.body.removeChild(script2);
       };
     } else if(window.location.search.includes("crazygames")) {
+      setInCrazyGames(true);
       console.log("CrazyGames detected");
     //<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
     const script = document.createElement('script');

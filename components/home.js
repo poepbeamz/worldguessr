@@ -2020,7 +2020,7 @@ if(inCrazyGames) {
 
   return (
     <>
-      <HeadContent text={text} inCoolMathGames={inCoolMathGames} inCrazyGames={inCrazyGames} />
+      <HeadContent text={text} inCoolMathGames={inCoolMathGames} inCrazyGames={inCrazyGames} setInCrazyGames={setInCrazyGames} />
 
       <AccountModal inCrazyGames={inCrazyGames} shown={accountModalOpen} session={session} setAccountModalOpen={setAccountModalOpen} />
       <SetUsernameModal shown={session && session?.token?.secret && !session.token.username} session={session} />
