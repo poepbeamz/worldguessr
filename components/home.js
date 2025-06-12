@@ -2187,9 +2187,9 @@ if(inCrazyGames) {
               <>
             <h1 className="home__title">WorldGuessr</h1>
 
-              { height > 650 && width > 1000 && (
+              {/* { height > 650 && width > 1000 && (
             <HomeNotice text={text("maintenanceText1", {date: getMaintenanceDate(), time: getTimeString()})} shown={true} />
-              )}
+              )} */}
             </>
             )}
 
@@ -2203,7 +2203,7 @@ if(inCrazyGames) {
       <div className={`mainHomeBtns `}>
 
                {/* <GameBtn text={text("singleplayer")} onClick={() => {
-                if (!loading) setScreen("singleplayer")
+               (!loading) setScreen("singleplayer")
               }} /> */}
               <button className="homeBtn singleplayer"
 
@@ -2308,7 +2308,7 @@ if(inCrazyGames) {
           inCoolMathGames={inCoolMathGames}
           miniMapShown={miniMapShown} setMiniMapShown={setMiniMapShown}
             singlePlayerRound={singlePlayerRound} setSinglePlayerRound={setSinglePlayerRound} showDiscordModal={showDiscordModal}  setShowDiscordModal={setShowDiscordModal} inCrazyGames={inCrazyGames} showPanoOnResult={showPanoOnResult} setShowPanoOnResult={setShowPanoOnResult} options={options} countryStreak={countryStreak} setCountryStreak={setCountryStreak} xpEarned={xpEarned} setXpEarned={setXpEarned} hintShown={hintShown} setHintShown={setHintShown} pinPoint={pinPoint} setPinPoint={setPinPoint} showAnswer={showAnswer} setShowAnswer={setShowAnswer} loading={loading} setLoading={setLoading} session={session} gameOptionsModalShown={gameOptionsModalShown} setGameOptionsModalShown={setGameOptionsModalShown} latLong={latLong} streetViewShown={streetViewShown} setStreetViewShown={setStreetViewShown} loadLocation={loadLocation} gameOptions={gameOptions} setGameOptions={setGameOptions} />
-        </div>}
+        </div>} if
 
         {screen === "onboarding" && onboarding?.round && <div className="home__onboarding">
           <GameUI
