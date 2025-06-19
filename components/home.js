@@ -1917,10 +1917,12 @@ if(inCrazyGames) {
         className={`home`}
         id="main"
         style={{
-          backgroundImage: "url(https://i.postimg.cc/bv9fLHTP/Schermafbeelding-2025-06-19-190959.png)",
-          backgroundSize: "contain",
+          backgroundImage: "url(https://sjc.microlink.io/QRVciCl1SNO0ZMDIhL9joLA5Blgdg_ohQoluefwNlV7w0-0ETr5I3g4tQ3Po321ls4bf_1nwsRLcSzjL30E1Rg.jpeg)",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          border: "none",
+          outline: "none",
         }}
       >
         <SvEmbedIframe
