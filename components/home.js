@@ -211,8 +211,6 @@ statsRef.current = stats;
   if(typeof window !== "undefined") window.login = login;
 }
 
-
-
   const [isApp, setIsApp] = useState(false);
   const [inCrazyGames, setInCrazyGames] = useState(false);
   const [maintenance, setMaintenance] = useState(false);
@@ -237,8 +235,6 @@ statsRef.current = stats;
   //   }
   // }, [screen])
 
-
-
   const [config, setConfig] = useState(null);
   const [eloData, setEloData] = useState(null);
   const [animatedEloDisplay, setAnimatedEloDisplay] = useState(0);
@@ -252,8 +248,6 @@ statsRef.current = stats;
     }).catch((e) => {
       window.firstFetchElo = true;
     });
-
-
 
   }, [session?.token?.username, leagueModal])
   useEffect(() => {
@@ -600,8 +594,6 @@ setShowCountryButtons(false)
   }
   // setOnboardingCompleted(false)
   }, [])
-
-
 
   useEffect(() => {
 
@@ -1192,8 +1184,6 @@ if(inCrazyGames) {
     }
     if (!ws) return;
 
-
-
     ws.onmessage = (msg) => {
       const data = JSON.parse(msg.data);
 
@@ -1277,8 +1267,6 @@ if(inCrazyGames) {
           npz: data.npz,
           showRoadName: data.showRoadName
         }))
-
-
 
           if (data.state === "getready") {
             setMultiplayerChatEnabled(true)
@@ -1943,10 +1931,6 @@ if(inCrazyGames) {
         });
     }
 
-
-
-
-
       if(hasCheatStyles()) return true;
       try {
       if(window.localStorage.getItem("bannedr")) return true;
@@ -2093,29 +2077,11 @@ if(inCrazyGames) {
         </div>
         )}
 
-<div style={{
-        top: 0,
-        left: 0,
-        position: 'fixed',
-        width: '100vw',
-        height: '100vh',
-        transition: 'opacity 0.5s',
-        opacity: 0.4,
-        userSelect: 'none',
-       WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        msUserSelect: 'none',
-        pointerEvents: 'none',
+      <main className={`home`} id="main" style={{
+        backgroundImage: 'url(https://i.postimg.cc/bv9fLHTP/Schermafbeelding-2025-06-19-190959.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}>
-      <NextImage.default src={'./street1.jpg'}
-      draggable={false}
-      fill   alt="Game Background" style={{objectFit: "cover",userSelect:'none'}}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-      </div>
-
-
-      <main className={`home`} id="main">
 
         <SvEmbedIframe
           nm={gameOptions?.nm}
@@ -2139,8 +2105,6 @@ if(inCrazyGames) {
           />
 
         <BannerText text={`${text("loading")}...`} shown={loading} showCompass={true} />
-
-
 
       <Navbar
       joinCodePress={() => {
@@ -2172,8 +2136,6 @@ if(inCrazyGames) {
 )}
 
         <div className={`home__content ${screen !== "home" ? "hidden" : "cshown"} `}>
-
-
 
         { onboardingCompleted===null ? (
           <>
@@ -2308,7 +2270,7 @@ if(inCrazyGames) {
           inCoolMathGames={inCoolMathGames}
           miniMapShown={miniMapShown} setMiniMapShown={setMiniMapShown}
             singlePlayerRound={singlePlayerRound} setSinglePlayerRound={setSinglePlayerRound} showDiscordModal={showDiscordModal}  setShowDiscordModal={setShowDiscordModal} inCrazyGames={inCrazyGames} showPanoOnResult={showPanoOnResult} setShowPanoOnResult={setShowPanoOnResult} options={options} countryStreak={countryStreak} setCountryStreak={setCountryStreak} xpEarned={xpEarned} setXpEarned={setXpEarned} hintShown={hintShown} setHintShown={setHintShown} pinPoint={pinPoint} setPinPoint={setPinPoint} showAnswer={showAnswer} setShowAnswer={setShowAnswer} loading={loading} setLoading={setLoading} session={session} gameOptionsModalShown={gameOptionsModalShown} setGameOptionsModalShown={setGameOptionsModalShown} latLong={latLong} streetViewShown={streetViewShown} setStreetViewShown={setStreetViewShown} loadLocation={loadLocation} gameOptions={gameOptions} setGameOptions={setGameOptions} />
-        </div>} if
+        </div>}
 
         {screen === "onboarding" && onboarding?.round && <div className="home__onboarding">
           <GameUI
@@ -2379,8 +2341,6 @@ if(inCrazyGames) {
             showRoadName: multiplayerState?.gameData?.showRoadName
            }} setGameOptions={() => { }} showAnswer={(multiplayerState?.gameData?.curRound !== 1) && multiplayerState?.gameData?.state === 'getready'} setShowAnswer={guessMultiplayer} />
         )}
-
-
 
         <Script id="clarity">
           {`
@@ -2515,4 +2475,3 @@ if(window.inCrazyGames) {
     </>
   )
 }
-
